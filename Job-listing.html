@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <!-- External Job Listing CSS Link -->
+    <link rel="stylesheet" href="./Assets/CSS/joblisting.css">
+
+    <!-- Font-Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>QES Diamond Personnel - Job Listing</title>
+</head>
+
+<body>
+    <!-- Navbar Component -->
+    <header>
+        <div id="header"></div>
+        <!-- Line starts here -->
+        <div class="container-fluid hr-wrapper">
+            <hr>
+        </div>
+        <!-- Line starts here -->
+    </header>
+    <!-- Navbar component ends here -->
+
+    <!-- job banner component starts here -->
+    <section id="job_banner_section">
+        <div class="container Job-banner-wrapper">
+            <img src="./Assets/Img/service-banner-mob.png" alt="">
+            <div class="job-banner-content">
+                <h1>Positions Currently <br> Available</h1>
+                <p>Diamond Personnel is the recognized source for the largest variety of jobs in the legal, scientific,
+                    financial, and creative fields. You can apply directly through a listing or call us at <a
+                        href="tel: 212-631-7520">212-631-7520</a>
+                    to
+                    let us know about the kind of job you are looking to find. </p>
+                <img src="./Assets/Img/services-banner.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- job banner component ends here -->
+
+    <!-- hide show javascript component starts here -->
+    <section id="job_listing_section">
+        <div class="container job-listing-wrapper">
+            <h2>Industries</h2>
+            <p>The perfect job for you</p>
+
+            <!-- Button starts here -->
+            <div class="CTA-btn">
+                <button id="btn_fun1" onclick="legalShow()" class="actives1">Legal</button>
+                <button id="btn_fun2" class="" onclick="staffingShow()">Staffing</button>
+                <button id="btn_fun3" class="" onclick="scientificShow()">Scientific</button>
+                <button id="btn_fun4" class="" onclick="financialsShow()">Financial</button>
+                <button id="btn_fun5" class="" onclick="creativeShow()">Creative</button>
+            </div>
+            <!-- Button ends here -->
+            <!-- select for mobile device -->
+            <select id="select-option-1" class="form-select">
+                <option value="0">
+                    <p>Legal</p>
+                </option>
+                <option value="1">
+                    <p>Staffing</p>
+                </option>
+                <option value="2">
+                    <p>Scientific</p>
+                </option>
+                <option value="3">
+                    <p>Financial</p>
+                </option>
+                <option value="4">
+                    <p>Creative</p>
+                </option>
+            </select>
+            <div class="input-select">
+                <input type="text" class="form-control my-3" id="Search" onkeyup="filterJobs()"
+                    placeholder="Search jobs" title="Search jobs">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- select for mobile device -->
+        </div>
+    </section>
+    <!-- hide show javascript component ends here -->
+
+    <!-- hide show javascript component-2 starts here -->
+    <section id="listing_section">
+        <div class="container listing-wrapper" id="showLarge">
+            <!-- Legal jobs listing starts here -->
+            <div id="Legal_listing" style="display: block;">
+                <div id="Box1">
+                    <h3>Executive Litigation Legal Secretary – L.A.</h3>
+                    <p>Los Angeles, CA</p>
+                    <p>Global law firm located in the downtown Los Angeles area is seeking an Executive level Legal
+                        Secretary
+                        to provide support to 2 Partners and 1 Counsel. The ideal candidate will have experience
+                        supporting
+                        a
+                        litigation practice group leader and/or Managing Partner, and/or Chairman. Experience e-filing
+                        with
+                        both
+                        the California State and Federal Courts are required. […]</p>
+                </div>
+                <div id="Box1">
+                    <h3>Executive Litigation Legal Secretary – L.A.</h3>
+                    <p>Los Angeles, CA</p>
+                    <p>Global law firm located in the downtown Los Angeles area is seeking an Executive level Legal
+                        Secretary
+                        to provide support to 2 Partners and 1 Counsel. The ideal candidate will have experience
+                        supporting
+                        a
+                        litigation practice group leader and/or Managing Partner, and/or Chairman. Experience e-filing
+                        with
+                        both
+                        the California State and Federal Courts are required. […]</p>
+                </div>
+                <div id="Box1">
+                    <h3>Executive Litigation Legal Secretary – L.A.</h3>
+                    <p>Los Angeles, CA</p>
+                    <p>Global law firm located in the downtown Los Angeles area is seeking an Executive level Legal
+                        Secretary
+                        to provide support to 2 Partners and 1 Counsel. The ideal candidate will have experience
+                        supporting
+                        a
+                        litigation practice group leader and/or Managing Partner, and/or Chairman. Experience e-filing
+                        with
+                        both
+                        the California State and Federal Courts are required. […]</p>
+                </div>
+            </div>
+            <!-- Legal jobs listing ends here -->
+            <!-- staffing jobs listing starts here -->
+            <div id="staffing_listing" class="no-listing" style="display: none;">
+                <h3>No Jobs Currently Match Your Needs</h3>
+                <p>Please check back with us as our job listings are always being updated. You can also <br> call us at
+                    212-631-7520 to discuss the kind of job you are looking to find.</p>
+            </div>
+            <!-- staffing jobs listing ends here -->
+            <!-- scientific jobs listing starts here -->
+            <div id="scientific_listing" class="no-listing" style="display: none;">
+                <h3>No Jobs Currently Match Your Needs</h3>
+                <p>Please check back with us as our job listings are always being updated. You can also <br> call us at
+                    212-631-7520 to discuss the kind of job you are looking to find.</p>
+            </div>
+            <!-- scientific jobs listing ends here -->
+            <!-- financial jobs listing starts here -->
+            <div id="financial_listing" class="no-listing" style="display: none;">
+                <h3>No Jobs Currently Match Your Needs</h3>
+                <p>Please check back with us as our job listings are always being updated. You can also <br> call us at
+                    212-631-7520 to discuss the kind of job you are looking to find.</p>
+            </div>
+            <!-- financial jobs listing ends here -->
+            <!-- creative jobs listing starts here -->
+            <div id="creative_listing" class="no-listing" style="display: none;">
+                <h3>No Jobs Currently Match Your Needs</h3>
+                <p>Please check back with us as our job listings are always being updated. You can also <br> call us at
+                    212-631-7520 to discuss the kind of job you are looking to find.</p>
+            </div>
+            <!-- creative jobs listing ends here -->
+        </div>
+
+        <!-- Mobile Devices code starts here -->
+        <section>
+            <div class="container listing-wrapper" id="showMobile">
+                <!-- Legal jobs listing starts here -->
+                <div id="Legal_listing_mob" style="display: block;">
+                    <div id="Box1" class="card-sm-2">
+                        <h3 class="title">Executive Litigation Legal Secretary – L.A.</h3>
+                        <p>Los Angeles, CA</p>
+                        <p>Global law firm located in the downtown Los Angeles area is seeking an Executive level Legal
+                            Secretary
+                            to provide support to 2 Partners and 1 Counsel. The ideal candidate will have experience
+                            supporting
+                            a
+                            litigation practice group leader and/or Managing Partner, and/or Chairman. Experience
+                            e-filing
+                            with
+                            both
+                            the California State and Federal Courts are required. […]</p>
+                    </div>
+                    <div id="Box1" class="card-sm-2">
+                        <h3 class="title">Executive Litigation Legal Secretary – L.A.</h3>
+                        <p>Los Angeles, CA</p>
+                        <p>Global law firm located in the downtown Los Angeles area is seeking an Executive level Legal
+                            Secretary
+                            to provide support to 2 Partners and 1 Counsel. The ideal candidate will have experience
+                            supporting
+                            a
+                            litigation practice group leader and/or Managing Partner, and/or Chairman. Experience
+                            e-filing
+                            with
+                            both
+                            the California State and Federal Courts are required. […]</p>
+                    </div>
+                    <div id="Box1" class="card-sm-2">
+                        <h3 class="title">Executive Litigation Legal Secretary – L.A.</h3>
+                        <p>Los Angeles, CA</p>
+                        <p>Global law firm located in the downtown Los Angeles area is seeking an Executive level Legal
+                            Secretary
+                            to provide support to 2 Partners and 1 Counsel. The ideal candidate will have experience
+                            supporting
+                            a
+                            litigation practice group leader and/or Managing Partner, and/or Chairman. Experience
+                            e-filing
+                            with
+                            both
+                            the California State and Federal Courts are required. […]</p>
+                    </div>
+                </div>
+                <!-- Legal jobs listing ends here -->
+                <!-- staffing jobs listing starts here -->
+                <div id="staffing_listing_mob" style="display: none;">
+                    <div class="no-listing">
+                        <h3>No Jobs Currently Match Your Needs</h3>
+                        <p>Please check back with us as our job listings are always being updated. You can also <br>
+                            call us at
+                            212-631-7520 to discuss the kind of job you are looking to find.</p>
+                    </div>
+                </div>
+                <!-- staffing jobs listing ends here -->
+                <!-- scientific jobs listing starts here -->
+                <div id="scientific_listing_mob" style="display: none;">
+                    <div class="no-listing">
+                        <h3>No Jobs Currently Match Your Needs</h3>
+                        <p>Please check back with us as our job listings are always being updated. You can also <br>
+                            call us at
+                            212-631-7520 to discuss the kind of job you are looking to find.</p>
+                    </div>
+                </div>
+                <!-- scientific jobs listing ends here -->
+                <!-- financial jobs listing starts here -->
+                <div id="financial_listing_mob" style="display: none;">
+                    <div class="no-listing">
+                        <h3>No Jobs Currently Match Your Needs</h3>
+                        <p>Please check back with us as our job listings are always being updated. You can also <br>
+                            call us at
+                            212-631-7520 to discuss the kind of job you are looking to find.</p>
+                    </div>
+                </div>
+                <!-- financial jobs listing ends here -->
+                <!-- creative jobs listing starts here -->
+                <div id="creative_listing_mob" style="display: none;">
+                    <div class="no-listing">
+                        <h3>No Jobs Currently Match Your Needs</h3>
+                        <p>Please check back with us as our job listings are always being updated. You can also <br>
+                            call us at
+                            212-631-7520 to discuss the kind of job you are looking to find.</p>
+                    </div>
+                </div>
+                <!-- creative jobs listing ends here -->
+            </div>
+        </section>
+        <!-- Mobile Devices code ends here -->
+    </section>
+    <!-- hide show javascript component-2 ends here -->
+
+
+    <!-- footer component starts here -->
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <!-- footer component ends here -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Component Loader -->
+    <script src="./Assets/JS/Include.js"></script>
+
+    <!-- color loader -->
+    <script src="./Assets/JS/color.js"></script>
+
+    <script src="./Assets/JS/active-box.js"></script>
+
+    <script src="./Assets/JS/Job-script.js"></script>
+</body>
+
+</html>
