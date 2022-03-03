@@ -1,0 +1,87 @@
+<!-- Navbar Component -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid logo-wrapper">
+        <a class="navbar-brand" href="index.html"><img
+                src="https://ditechcdm.github.io/sturdy-computing-machine.github.io/Logo-01.png" style="width: 200px;"
+                alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"> <img
+                    src="https://yadavashishdhirendra.github.io/Preloader-Image.github.io/more.png" id="hamburger_menu"
+                    onclick="change();" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item dropdown mb-negative">
+                    <span class="nav-link">
+                        <a href="Industries.html">Industries</a>
+                        <a class="dropdown-toggle rotate" href="#" id="dropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fas fa-chevron-down icon-rotates"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li><a class="dropdown-item" href="#">Legal</a></li>
+                            <li><a class="dropdown-item" href="#">Scientific</a></li>
+                            <li><a class="dropdown-item" href="#">Financial</a></li>
+                            <li><a class="dropdown-item" href="#">Creative</a></li>
+                        </ul>
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Job-listing.html">Job Listing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar component ends here -->
+
+
+<!-- Caret Rotation script -->
+<script type="text/javascript">
+    $('.rotate').click(function () {
+
+        if ($(this).css("transform") == 'none') {
+            $(this).children().css({ 'transform': 'rotate(180deg)', 'transition': '.3s ease-in' });
+        } else {
+            $(this).children().css('transform', 'none');
+        }
+
+    });
+    $(".dropdown").on("hidden.bs.dropdown", function () {
+        $(this).find('.rotate').children().css('transform', 'none');
+    });
+</script>
+
+<!-- Active link script -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.each($('#nav').find('li'), function () {
+            $(this).toggleClass('active',
+                window.location.pathname.indexOf($(this).find('a').attr('href')) > -1);
+        });
+    });
+</script>
+
+<!-- Toggling hamburger_menu -->
+<script type="text/javascript">
+    function change() {
+        // storing image in variable
+        var menu = "https://yadavashishdhirendra.github.io/Preloader-Image.github.io/more.png",
+            cancel = "https://yadavashishdhirendra.github.io/Preloader-Image.github.io/close.png";
+        // Getting img id and store in a variable
+        var imgElement = document.getElementById('hamburger_menu');
+        // condition ternary operator
+        imgElement.src = (imgElement.src === menu) ? cancel : menu;
+    }
+</script>
